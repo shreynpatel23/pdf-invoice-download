@@ -1,14 +1,11 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const path = require("path");
-const fs = require("fs");
 const expressHbs = require("express-handlebars");
-const hbs = require("handlebars");
-const { createPdf, getDownloadAbleFile } = require("./helpers");
-const generatePdf = require("./helpers/generatePdf");
+const { createPdf, getDownloadAbleFile, generatePdf } = require("./helpers");
 
 const app = express();
-const port = 5000;
+const port = 2000;
 
 app.engine(
   "hbs",
