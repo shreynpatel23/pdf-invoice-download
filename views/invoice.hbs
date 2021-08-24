@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" style="margin: 0; padding: 0; box-sizing: border-box">
+<html
+  lang="en"
+  style="  margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	font-family: sans-serif !important;"
+>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,46 +15,926 @@
     <title>invoice</title>
   </head>
   <body
-    style="
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif !important;
-    "
+    style=" margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	font-family: sans-serif !important;"
   >
     <div
-      style="
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
+      style="  width: 1100px;
+	border-radius: 8px;
+	border: 1px solid #ddd; padding: 0 10px"
     >
-      <div
-        style="
-          width: 500px;
-          border-radius: 8px;
-          border: 1px solid #ddd;
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        "
+      <p
+        style="font-size: 18px;
+	font-weight: bold;
+	color: #202020;
+	text-align: center;
+	margin: 0;
+	padding: 10px 0;"
+      >Mr.Samarth N Patel</p>
+      <p
+        style="  margin: 0;
+	width: 40%;
+	margin: 0 auto;
+	font-size: 14px;
+	text-align: center;
+	font-weight: normal;
+	padding: 3px 0 10px;
+	color: #000;"
       >
-        <div
-          style="
-            height: 10%;
-            padding: 20px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-          "
-        >
-          <p style="margin: 0; font-size: 20px; color: #202020">Invoice</p>
+        A-21, Shantiniketan raw house, Beside Sneh sankul Wadi, Aanand mahal
+        road, Adajan, Surat-395009.
+      </p>
+      <div
+        style=" padding: 10px;
+								background-color: #6abbfd;
+								font-size: 20px;
+								text-align: center;
+								font-weight: bold;
+								color: #202020;
+								border: 1px solid #202020;"
+      >Tax Invoice</div>
+      <div style="display: flex;">
+        <div style="width: 50%;">
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Invoice No: {{invoice_number}}</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Invoice Date: {{formatted_date}}</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Reverse Charge (Y/N): No</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >State: Gujarat</div>
+          <div
+            style="  background-color: #6abbfd;
+	text-align: center;"
+          >Bill to Party</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Name: Go Fashions India Pvt. Ltd.</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >
+            Address : A-21, Shantiniketan raw house, Beside Sneh sankul Wadi,
+            Aanand mahal road, Adajan, Surat-395009.
+          </div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >GSTIN:</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >State: Gujarat</div>
         </div>
-        <div style="height: 80%; padding: 20px">
-          <p>{{invoice_number}}</p>
-          <p>{{invoice_date}}</p>
-          <p>{{invoice_amount}}</p>
+        <div style="width: 50%;">
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Transport Mode:</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Vehicle number:</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Date of Supply</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Place of Supply: Gujarat</div>
+          <div
+            style="  background-color: #6abbfd;
+	text-align: center;"
+          >Ship to Party</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >Name: Go Fashions India Pvt. Ltd.</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >
+            Address : A-21, Shantiniketan raw house, Beside Sneh sankul Wadi,
+            Aanand mahal road, Adajan, Surat-395009.
+          </div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >GSTIN:</div>
+          <div
+            style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+          >State: Gujarat</div>
         </div>
       </div>
+      <!-- table body header  -->
+      <div
+        style="  width: 100%;
+	background-color: #6abbfd; display: flex;"
+      >
+        <div
+          style="width: 2%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >SR no</p>
+        </div>
+        <div
+          style="width: 25%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Description of service</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >SAC Code</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >QTY</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Rate</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Amount</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Discount</p>
+        </div>
+        <div
+          style="width: 10%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Taxable value</p>
+        </div>
+        <div
+          style="width: 15%;
+	border: 1px solid #000;"
+        >
+          <p
+            style="height: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >
+            CGST
+          </p>
+          <div
+            style="height: 50%; border-top: 1px solid #000;display: flex; align-items: center;"
+          >
+            <div style="height: 50%;width: 50%;">
+              <p
+                style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >Rate</p>
+            </div>
+            <div style="height: 50%;width: 50%;">
+              <p
+                style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >Amount</p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width: 15%;
+	border: 1px solid #000;"
+        >
+          <p
+            style="height: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >
+            SGST
+          </p>
+          <div
+            style="height: 50%; border-top: 1px solid #000; display: flex; align-items: center;"
+          >
+            <div style="height: 50%;width: 50%;">
+              <p
+                style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >Rate</p>
+            </div>
+            <div style="height: 50%;width: 50%;">
+              <p
+                style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >Amount</p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width: 8%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style=" font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Total</p>
+        </div>
+      </div>
+      <!-- Table body row  -->
+      <div style="width: 100%;display: flex;">
+        <div
+          style="width: 2%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >1</p>
+        </div>
+        <div
+          style="width: 25%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Rent For the Month Of {{month_name}}'{{year}}</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >-</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >-</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >-</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >-</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >-</p>
+        </div>
+        <div
+          style="width: 10%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >{{invoice_amount}}</p>
+        </div>
+        <div
+          style="width: 15%;
+	border: 1px solid #000;"
+        >
+          <div
+            style="height: 50%; border-top: 1px solid #000;display: flex; align-items: center;"
+          >
+            <div style="width: 50%; height: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+            <div style="height: 50%;width: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="  width: 15%;
+	border: 1px solid #000;"
+        >
+          <div
+            style="height: 50%; border-top: 1px solid #000;display: flex; align-items: center;"
+          >
+            <div style="width: 50%; height: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+            <div style="height: 50%;width: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width: 8%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >{{invoice_amount}}</p>
+        </div>
+      </div>
+      <!-- Total Sum  -->
+      <div style="width: 100%; display: flex;">
+        <div
+          style=" width: 48%;
+	background-color: #6abbfd;
+	border: 1px solid #000;display: flex; align-items: center; justify-content: center;"
+        >
+          <p
+            style="font-size: 32px;
+	color: #000;font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >Total</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >-</p>
+        </div>
+        <div
+          style="width: 5%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >-</p>
+        </div>
+        <div
+          style="width: 10%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >{{invoice_amount}}</p>
+        </div>
+        <div
+          style="  width: 15%;
+	border: 1px solid #000;"
+        >
+          <div
+            style="height: 50%; border-top: 1px solid #000; display: flex; align-items: center;"
+          >
+            <div style="width: 50%; height: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+            <div style="height: 50%;width: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width: 15%;
+	border: 1px solid #000;"
+        >
+          <div
+            style="height: 50%; border-top: 1px solid #000;display: flex; align-items: center;"
+          >
+            <div style="width: 50%; height: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+            <div style="height: 50%;width: 50%;">
+              <p
+                style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+              >0</p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width: 8%;
+	padding: 10px 5px;
+	border: 1px solid #000;"
+        >
+          <p
+            style="  font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #202020;
+	margin: 0;
+	word-break: break-all;
+	word-wrap: break-word;"
+          >{{invoice_amount}}</p>
+        </div>
+      </div>
+			<!-- Amount in words and Bifurcation  -->
+      <div style="display: flex">
+        <div style="width: 50%;">
+          <div
+            style="  background-color: #6abbfd;
+	text-align: center; padding: 8px"
+          >Total Invoice amount in words</div>
+          <div
+            style="text-align: center; height: 95px; padding: 5px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000; font-size: 18px; display: flex; justify-content: center; align-items: center;"
+          >
+            {{amount_in_words}}
+          </div>
+        </div>
+        <div style="width: 50%;">
+          <div style="display: flex">
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+              >Taxable amount</div>
+            </div>
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;text-align: right"
+              >
+                {{invoice_amount}}
+              </div>
+            </div>
+          </div>
+          <div style="display: flex">
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+              >Add CGST</div>
+            </div>
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;text-align: right"
+              >0</div>
+            </div>
+          </div>
+          <div style="display: flex">
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+              >Add SGST</div>
+            </div>
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000; text-align: right"
+              >0</div>
+            </div>
+          </div>
+          <div style="display: flex">
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+              >Total Invoice value:</div>
+            </div>
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;text-align: right"
+              >
+                {{invoice_amount}}
+              </div>
+            </div>
+          </div>
+          <div
+            style="text-align: left; display: flex;background-color: #6abbfd;
+  text-align: center;"
+          >
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;"
+              >GST on Reverse Charge:</div>
+            </div>
+            <div style="width: 50%;">
+              <div
+                style="  padding: 5px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;
+	border: 1px solid #000;text-align: right"
+              >0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+			<!-- Bank details section  -->
+			<div style="display: flex">
+				<div style="width: 50%; border: 1px solid #000;">
+					<div
+            style="  padding: 8px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;"
+          >Bank Details</div>
+					<div
+            style="  padding: 8px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;"
+          >Bank Name: ICICI Bank</div>
+					<div
+            style="  padding: 8px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;"
+          >Bank A/C: 189901000751  </div>
+					<div
+            style="  padding: 8px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;"
+          >Bank IFSC: ICIC0001899 </div>
+          <div
+            style="  padding: 8px;
+	font-size: 14px;
+	color: #202020;
+	font-weight: bold;"
+          >Terms & conditions 
+					<div style="padding: 8px 0; font-weight: normal">
+						# GST Not Applicable
+					</div>
+					</div>
+				</div>
+        <div style="width: 50%; border: 1px solid #000;">
+          <div style="height: 40%; display: flex; justify-content: center; align-items: center;">
+            <div style="text-align: center;">
+             <div style="font-size: 12px; color: #202020; font-weight: normal;padding: 5px 0;">Ceritified that the particulars given above are true and correct</div>
+             <div style="font-size: 16px; color: #202020; font-weight: bold;padding: 5px 0">For Samarth N Patel</div>
+            </div>
+          </div>
+          <div style="height: 40%">
+            
+          </div>
+          <div style="height: 20%; display: flex; justify-content: center; align-items: center">
+            <div style="font-size: 16px; color: #202020; font-weight: bold;">Authorised signatory</div>
+          </div>
+        </div>
+				</div>
+			</div>
     </div>
   </body>
 </html>

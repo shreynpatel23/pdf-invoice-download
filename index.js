@@ -2,7 +2,13 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const path = require("path");
 const expressHbs = require("express-handlebars");
-const { createPdf, getDownloadAbleFile, generatePdf } = require("./helpers");
+const {
+  createPdf,
+  getDownloadAbleFile,
+  generatePdf,
+  getAmountInWords,
+  getMonthName,
+} = require("./helpers");
 
 const app = express();
 const port = 2000;
@@ -27,23 +33,33 @@ app.post("/downloadPdf", async (req, res) => {
   if (!invoice_number || !invoice_date || !invoice_amount)
     return res.status(400).send("something went wrong");
 
+  const amount_in_words = getAmountInWords(invoice_amount);
+  const date = new Date(invoice_date);
+  const formatted_date = `${date.getDate()}/${
+    date.getMonth() + 1
+  }/${date.getFullYear()}`;
+  const month_name = getMonthName(date.getMonth());
+  const year = date.getFullYear();
   // use this function to generate the pdf and render the html content
   const htmlContent = await generatePdf({
     invoice_number,
-    invoice_date,
+    formatted_date,
     invoice_amount,
+    amount_in_words,
+    month_name,
+    year,
   });
 
   // creating the pdf
-  await createPdf(`${invoice_number}.pdf`, htmlContent);
+  await createPdf(`${month_name}_${year}_invoice.pdf`, htmlContent);
 
   // get the downloadable link and send it as a response
-  const { file, stat } = await getDownloadAbleFile(invoice_number);
+  const { file, stat } = await getDownloadAbleFile({ month_name, year });
   res.setHeader("Content-Length", stat.size);
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader(
     "Content-Disposition",
-    `attachment; filename=${invoice_number}.pdf`
+    `attachment; filename=${month_name}_${year}_invoice.pdf`
   );
   res.send(file);
 });

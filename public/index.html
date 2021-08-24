@@ -5,31 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Go colours rent invoice</title>
-  </head>
-  <body
-    style="
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif !important;
-    "
-  >
-    <div
-      style="
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif !important;
+      }
+      .wrapper {
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-      "
-    >
-      <div
-        style="
-          width: 500px;
-          border-radius: 8px;
-          border: 1px solid #ddd;
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        "
-      >
+      }
+      .invoice_details_card {
+        width: 500px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      }
+      .invoice_input {
+        width: 400px;
+        height: 30px;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        padding: 0 10px;
+      }
+      @media screen and (max-width: 330px) {
+        .wrapper {
+          display: block;
+          padding: 20px;
+        }
+        .invoice_details_card {
+          width: 100%;
+        }
+        .invoice_input {
+          width: 220px;
+        }
+      }
+      @media screen and (min-width: 330px) and (max-width: 600px) {
+        .wrapper {
+          display: block;
+          padding: 20px;
+        }
+        .invoice_details_card {
+          width: 100%;
+        }
+        .invoice_input {
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="invoice_details_card">
         <div
           style="
             height: 10%;
@@ -39,7 +71,9 @@
             align-items: center;
           "
         >
-          <p style="margin: 0; font-size: 20px; color: #202020">Data points</p>
+          <p style="margin: 0; font-size: 20px; color: #202020">
+            Invoice Details
+          </p>
         </div>
         <div style="height: 80%; padding: 20px">
           <form method="POST" action="downloadPdf">
@@ -59,14 +93,7 @@
                 id="invoice_number"
                 name="invoice_number"
                 placeholder="Enter invoice number"
-                style="
-                  width: 400px;
-                  height: 30px;
-                  background-color: transparent;
-                  border-radius: 5px;
-                  border: 1px solid #ddd;
-                  padding: 0 10px;
-                "
+                class="invoice_input"
               />
             </div>
             <div style="padding: 10px 0">
@@ -85,14 +112,7 @@
                 id="invoice_date"
                 name="invoice_date"
                 placeholder="Enter invoice number"
-                style="
-                  width: 400px;
-                  height: 30px;
-                  background-color: transparent;
-                  border-radius: 5px;
-                  border: 1px solid #ddd;
-                  padding: 0 10px;
-                "
+                class="invoice_input"
               />
             </div>
             <div style="padding: 10px 0 25px">
@@ -111,14 +131,7 @@
                 id="invoice_amount"
                 name="invoice_amount"
                 placeholder="Enter invoice number"
-                style="
-                  width: 400px;
-                  height: 30px;
-                  background-color: transparent;
-                  border-radius: 5px;
-                  border: 1px solid #ddd;
-                  padding: 0 10px;
-                "
+                class="invoice_input"
               />
             </div>
             <div style="padding: 20px; display: flex; justify-content: center">
