@@ -31,7 +31,10 @@ function generatePdf({
 
 async function createPdf(pdfPath, htmlContent) {
   // open a new browser instance
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox"],
+  });
   // create a new page with the browser instance
   const page = await browser.newPage();
 
