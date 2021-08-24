@@ -11,7 +11,7 @@ const {
 } = require("./helpers");
 
 const app = express();
-const port = 2000;
+const port = process.env.PORT || 5000;
 
 app.engine(
   "hbs",
