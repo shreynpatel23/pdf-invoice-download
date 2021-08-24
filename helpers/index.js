@@ -42,7 +42,7 @@ async function createPdf(pdfPath, htmlContent) {
   await page.emulateMediaType("screen");
 
   await page.pdf({
-    path: `./pdfFiles/${pdfPath}`,
+    path: path.join(__dirname, `../pdfFiles/${pdfPath}`),
     format: "A4",
     printBackground: true,
   });
@@ -51,8 +51,12 @@ async function createPdf(pdfPath, htmlContent) {
 }
 
 async function getDownloadAbleFile({ month_name, year }) {
-  const file = fs.readFileSync(`./pdfFiles/${month_name}_${year}_invoice.pdf`);
-  const stat = fs.statSync(`./pdfFiles/${month_name}_${year}_invoice.pdf`);
+  const file = fs.readFileSync(
+    path.join(__dirname, `../pdfFiles/${month_name}_${year}_invoice.pdf`)
+  );
+  const stat = fs.statSync(
+    path.join(__dirname, `../pdfFiles/${month_name}_${year}_invoice.pdf`)
+  );
   return { file, stat };
 }
 
