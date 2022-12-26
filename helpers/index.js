@@ -1,5 +1,5 @@
 const fs = require("fs");
-const puppeteer = require("puppeteer");
+const chromium = require("chrome-aws-lambda");
 const path = require("path");
 const hbs = require("handlebars");
 
@@ -31,7 +31,7 @@ function generatePdf({
 
 async function createPdf(pdfPath, htmlContent) {
   // open a new browser instance
-  const browser = await puppeteer.launch({
+  const browser = await chromium.puppeteer.launch({
     headless: true,
     args: ["--no-sandbox"],
   });
