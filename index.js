@@ -29,11 +29,13 @@ app.get("/", (_, res) => {
 });
 
 app.post("/downloadPdf", async (req, res) => {
-  const { invoice_number, invoice_date, invoice_amount } = req.body;
-  if (!invoice_number || !invoice_date || !invoice_amount)
+  const { invoice_number, invoice_date, invoice_amount, invoice_discount } = req.body;
+  if (!invoice_number || !invoice_date || !invoice_amount || !invoice_discount)
     return res.status(400).send("something went wrong");
 
-  const amount_in_words = getAmountInWords(invoice_amount);
+    const net_amount = Number(invoice_amount) - Number(invoice_discount);
+
+  const amount_in_words = getAmountInWords(net_amount);
   const date = new Date(invoice_date);
   const formatted_date = `${date.getDate()}/${
     date.getMonth() + 1
@@ -45,6 +47,8 @@ app.post("/downloadPdf", async (req, res) => {
     invoice_number,
     formatted_date,
     invoice_amount,
+    invoice_discount,
+    net_amount,
     amount_in_words,
     month_name,
     year,

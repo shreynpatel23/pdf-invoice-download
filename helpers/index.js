@@ -8,14 +8,19 @@ function generatePdf({
   formatted_date,
   invoice_amount,
   amount_in_words,
+  invoice_discount,
+  net_amount,
   month_name,
   year,
 }) {
+
   const data = {
     invoice_number,
     formatted_date,
     invoice_amount,
     amount_in_words,
+    invoice_discount,
+    net_amount,
     month_name,
     year,
   };
